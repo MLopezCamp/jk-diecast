@@ -1,23 +1,25 @@
+version: "3.8"
+
 services:
   jenkins:
-    image: jenkins/jenkins:latest   # última versión de Jenkins
+    image: jenkins/jenkins:lts
     container_name: jenkins
     user: root
     ports:
-      - "8083:8080"   # interfaz web de Jenkins
-      - "50000:50000" # agentes
+      - "8083:8080"
+      - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock  # permite que Jenkins use Docker del host
-      - /usr/bin/docker:/usr/bin/docker
-    restart: unless-stopped
+    depends_on:
+      - dind
 
-  diecast-web:
-    build: .
-    container_name: diecast-web
-    ports:
-      - "8081:80"  # expone tu index.html / index.php
-    restart: unless-stopped
+  dind:
+    image: docker:24-dind   # cliente + daemon de docker
+    container_name: dind
+    privileged: true
+    volumes:
+      - dind-storage:/var/lib/docker
 
 volumes:
   jenkins_home:
+  dind-storage:
