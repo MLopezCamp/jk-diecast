@@ -2,6 +2,7 @@ services:
   jenkins:
     image: jenkins/jenkins:latest   # última versión de Jenkins
     container_name: jenkins
+    user: root
     ports:
       - "8083:8080"   # interfaz web de Jenkins
       - "50000:50000" # agentes
