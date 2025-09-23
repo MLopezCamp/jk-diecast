@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar código') {
             steps {
-                git branch: 'main', url: 'https://github.com/MLopezCamp/jk-diecast.git'
+                git branch: 'master', url: 'https://github.com/MLopezCamp/jk-diecast.git'
             }
         }
 
