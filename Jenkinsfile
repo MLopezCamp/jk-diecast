@@ -18,7 +18,7 @@ pipeline {
                     sh 'docker rm -f jk-diecast || true'
 
                     // Correr el contenedor en puerto 8080
-                    sh 'docker run -d --name jk-diecast -p 8080:80 jk-diecast:latest'
+                    sh 'docker run -d --name jk-diecast -p 8081:80 jk-diecast:latest'
                 }
             }
         }
