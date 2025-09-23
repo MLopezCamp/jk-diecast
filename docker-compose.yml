@@ -17,6 +17,9 @@ services:
     image: docker:24-dind   # cliente + daemon de docker
     container_name: dind
     privileged: true
+    command: ["--host=tcp://0.0.0.0:2375", "--host=unix:///var/run/docker.sock"]
+    ports:
+      - "2375:2375"
     volumes:
       - dind-storage:/var/lib/docker
 
