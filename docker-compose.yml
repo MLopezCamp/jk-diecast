@@ -8,6 +8,7 @@ services:
     volumes:
       - jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock  # permite que Jenkins use Docker del host
+      - /usr/bin/docker:/usr/bin/docker
     restart: unless-stopped
 
   diecast-web:
