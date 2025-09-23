@@ -2,19 +2,34 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonar código') {
+        stage('Build Docker Image') {
             steps {
-                git branch: 'master', url: 'https://github.com/MLopezCamp/jk-diecast.git'
+                script {
+                    // Construir imagen con tu Dockerfile
+                    sh 'docker build -t jk-diecast:latest .'
+                }
             }
         }
 
-        stage('Construir y desplegar con Docker Compose') {
+        stage('Deploy Container') {
             steps {
                 script {
-                    sh 'docker compose down'
-                    sh 'docker compose up -d --build'
+                    // Eliminar contenedor anterior (si existe)
+                    sh 'docker rm -f jk-diecast || true'
+
+                    // Correr el contenedor en puerto 8080
+                    sh 'docker run -d --name jk-diecast -p 8080:80 jk-diecast:latest'
                 }
             }
+        }
+    }
+
+    post {
+        success {
+            echo "✅ Despliegue exitoso: abre http://localhost:8080"
+        }
+        failure {
+            echo "❌ Hubo un error en el pipeline, revisa los logs."
         }
     }
 }
