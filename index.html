@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>El mundo del coleccionismo de autos a escala</title>
+  <style>
+    :root{--accent:#111827;--muted:#6b7280}
+    body{font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#f7fafc; color:#111; line-height:1.5; padding:24px}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+    header img{width:82px;height:56px;object-fit:cover;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,0.08)}
+    h1{font-size:26px;margin:0}
+    p.lead{color:var(--muted);max-width:60ch}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+    .card{background:white;border-radius:10px;padding:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06);display:flex;flex-direction:column;gap:10px}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+    .card a{color:#0b5fff;text-decoration:none;font-weight:600}
+    .section{margin-top:18px}
+    footer{margin-top:26px;color:var(--muted);font-size:14px}
+
+    /* estética simple para un hypercar destacado */
+    .hero{display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;background:linear-gradient(90deg, rgba(11,95,255,0.06), rgba(11,95,255,0.01));}
+    .hero figure{margin:0}
+    .hero img{width:220px;height:120px;object-fit:cover;border-radius:8px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:#eef2ff;padding:6px 10px;border-radius:999px;font-size:13px;color:#1f2937}
+
+    /* responsive pequeño */
+    @media (max-width:560px){header{flex-direction:column;align-items:flex-start} .hero{flex-direction:column;align-items:flex-start} .hero img{width:100%;height:160px}}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Diecast_models.jpg" alt="Modelos diecast">
+    <div>
+      <h1>El mundo del coleccionismo de autos a escala</h1>
+      <p class="lead">Breve recorrido por la afición: desde Hot Wheels y Matchbox hasta modelos 1:18 muy detallados (pagadas por coleccionistas). Aquí verás ejemplos, enlaces a imágenes y un pequeño foco en los hypercars a escala.</p>
+    </div>
+  </header>
+
+  <section class="hero">
+    <figure>
+      <!-- enlace a una página con imagen de hypercar en 1:18 -->
+      <a href="https://diecastmodelswholesale.com/lamborghini-revuelto-green-metallic-special-edition-1-18-diecast-model-car-by-maisto/" target="_blank" rel="noopener noreferrer">
+        <img alt="Lamborghini Revuelto 1:18 (ejemplo)" src="https://diecastmodelswholesale.com/wp-content/uploads/2024/07/lamborghini-revuelto-1-18.jpg">
+      </a>
+    </figure>
+    <div>
+      <h2 style="margin:0 0 6px 0">Hypercar a escala: un mini superdeportivo</h2>
+      <p style="margin:0;color:var(--muted)">Los modelos 1:18 ofrecen detalles realistas (interiores, puertas que abren, llantas de goma). Son piezas pensadas tanto para display como para coleccionistas exigentes.</p>
+      <div class="tags" style="margin-top:10px">
+        <span class="tag">1:18</span>
+        <span class="tag">Diecast</span>
+        <span class="tag">Edición limitada</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Galería (enlaces a imágenes / páginas)</h3>
+    <p style="color:var(--muted);margin-top:6px">Hice una selección de páginas donde puedes ver imágenes y ejemplos reales — haz clic para abrirlas.</p>
+
+    <div class="gallery">
+      <article class="card">
+        <a href="https://commons.wikimedia.org/wiki/File:1_24_Diecast_Car_Collection_(3986394328).jpg" target="_blank" rel="noopener noreferrer">
+          <img alt="Colección 1:24" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/1_24_Diecast_Car_Collection_%283986394328%29.jpg" onerror="this.style.display='none'">
+        </a>
+        <div>
+          <div style="color:var(--muted);font-size:13px">Colección variada (1:24)</div>
+          <a href="https://commons.wikimedia.org/wiki/File:1_24_Diecast_Car_Collection_(3986394328).jpg" target="_blank" rel="noopener noreferrer">Ver en Wikimedia Commons</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="https://commons.wikimedia.org/wiki/File:Collection_of_cars_1-43_scale_-VAZ_3.JPG" target="_blank" rel="noopener noreferrer">
+          <img alt="Colección 1:43" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Collection_of_cars_1-43_scale_-VAZ_3.JPG" onerror="this.style.display='none'">
+        </a>
+        <div>
+          <div style="color:var(--muted);font-size:13px">Modelos 1:43 — clásicos y modernos</div>
+          <a href="https://commons.wikimedia.org/wiki/File:Collection_of_cars_1-43_scale_-VAZ_3.JPG" target="_blank" rel="noopener noreferrer">Ver en Wikimedia Commons</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="https://autobarnmodel.com/diecast-cars-1-18-the-ultimate-scale-for-realistic-collectors-pieces/" target="_blank" rel="noopener noreferrer">
+          <img alt="Artículo sobre 1:18" src="https://autobarnmodel.com/wp-content/uploads/2024/12/diecast-1-18-article.jpg" onerror="this.style.display='none'">
+        </a>
+        <div>
+          <div style="color:var(--muted);font-size:13px">Artículo: por qué el 1:18 es tan apreciado</div>
+          <a href="https://autobarnmodel.com/diecast-cars-1-18-the-ultimate-scale-for-realistic-collectors-pieces/" target="_blank" rel="noopener noreferrer">Leer artículo</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="https://bugatti.store/products/bugatti-mistral-scale-model-1-18-black" target="_blank" rel="noopener noreferrer">
+          <img alt="Bugatti Mistral 1:18" src="https://cdn.shopify.com/s/files/1/0000/0000/products/bugatti-mistral-1-18.jpg" onerror="this.style.display='none'">
+        </a>
+        <div>
+          <div style="color:var(--muted);font-size:13px">Modelos oficiales: mini Bugatti</div>
+          <a href="https://bugatti.store/products/bugatti-mistral-scale-model-1-18-black" target="_blank" rel="noopener noreferrer">Ver producto</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Consejos rápidos para quien empieza</h3>
+    <ul style="margin-top:8px">
+      <li>Decide tu escala favorita: 1:64 (Hot Wheels), 1:43, 1:24, 1:18 (más detallada).</li>
+      <li>Busca ediciones limitadas y modelos con certificación si te interesa la inversión.</li>
+      <li>Cuida el embalaje y evita exposición prolongada a la luz directa para conservar pintura y cajas.</li>
+      <li>Únete a foros y grupos: los trueques y ventas entre coleccionistas son comunes.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div>Recursos y enlaces: Wikimedia Commons, tiendas especializadas (ej. AutoBarnModels, DiecastModelsWholesale, Bugatti store). Las imágenes aquí enlazadas apuntan a páginas públicas con licencias variadas — revisa cada fuente antes de reusar.</div>
+  </footer>
+
+</body>
+</html>

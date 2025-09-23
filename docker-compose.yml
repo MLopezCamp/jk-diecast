@@ -1,0 +1,21 @@
+services:
+  jenkins:
+    image: jenkins/jenkins:latest   # última versión de Jenkins
+    container_name: jenkins
+    ports:
+      - "8083:8080"   # interfaz web de Jenkins
+      - "50000:50000" # agentes
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock  # permite que Jenkins use Docker del host
+    restart: unless-stopped
+
+  diecast-web:
+    build: .
+    container_name: diecast-web
+    ports:
+      - "8081:80"  # expone tu index.html / index.php
+    restart: unless-stopped
+
+volumes:
+  jenkins_home:
