@@ -20,6 +20,8 @@ services:
     image: docker:24-dind
     container_name: dind
     privileged: true
+    environment:
+    - DOCKER_TLS_CERTDIR=
     ports:
       - "8082:8082"   # exponemos el puerto del contenedor web
       - "2375:2375"
