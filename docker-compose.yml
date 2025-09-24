@@ -15,7 +15,7 @@ services:
     depends_on:
       - dind
     volumes:
-      - jenkins_home:/var/jenkins_home
+      - ./jenkins_home:/var/jenkins_home
 
   dind:
     image: docker:24-dind
