@@ -24,6 +24,7 @@ services:
     privileged: true
     environment:
     - DOCKER_TLS_CERTDIR=
+    - DOCKER_REGISTRY_MIRROR=https://mirror.gcr.io
     ports:
       - "8082:8082"   # exponemos el puerto del contenedor web
       - "2375:2375"
